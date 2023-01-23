@@ -1,2 +1,0 @@
-// ghbdtn
-console.log("ghbdtn");
