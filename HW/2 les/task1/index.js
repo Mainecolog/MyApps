@@ -1,2 +1,3 @@
-// ghbdtn
-console.log("ghbdtn");
+// JavaScript-код с созданием переменных
+/*Автор:
+     Mainecolog*/
