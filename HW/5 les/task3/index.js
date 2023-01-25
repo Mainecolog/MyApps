@@ -1,4 +1,2 @@
-let userName = prompt ('Как вас зовут?','Введите ваше имя...');  
-userName = userName.toLowerCase().trim();
-// userName = (String.userName);
+const userName = prompt ('Как вас зовут?','Введите ваше имя...').toLowerCase().trim();
 alert(`Вас зовут: ${userName}`);

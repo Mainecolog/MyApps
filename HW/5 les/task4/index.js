@@ -1,8 +1,8 @@
-let userName = prompt ('Как вас зовут?','Введите ваше имя...');  
-userName = userName.toLowerCase().trim();
+const userName = prompt ('Как вас зовут?','Введите ваше имя...').toLowerCase().trim();
 
-let userAge = prompt(`Сколько вам лет?`, `Введите Ваш возраст...`);
-userAge = userAge.trim();
-userAge = Number(userAge);
+const userAge = prompt(`Сколько вам лет?`, `Введите Ваш возраст...`).trim();
 
-alert(`Вас зовут ${userName} и  вам ${userAge} лет`);
+// Нашел решение на просторах интернета.
+const clearUserAge = parseInt(userAge.match(/\d+/));
+
+alert(`Вас зовут ${userName} и вам ${clearUserAge} лет`);
