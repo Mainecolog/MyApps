@@ -1,7 +1,5 @@
 let correctAnswers = 0;
-correctAnswers = Number(correctAnswers);
 let incorrectAnswers = 0;
-incorrectAnswers = Number (incorrectAnswers);
 
 const question1 = "Сколько будет 2 + 2?";
 const question2 = "Сколько будет 2 * 2?";
