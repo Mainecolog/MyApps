@@ -2,8 +2,7 @@
 const getDivisorsCount = function(number)
 {
   // Нек доходит, а как задать такую проверку, чтобы исключить НЕПУСТЫЕ строки?
-  if ( !number){
-    number = Number(number);
+  if (isNaN(number) || typeof number !== `number`){
     return NaN
  };
   if (number <= 0 || !Number.isInteger(number)){
@@ -17,5 +16,5 @@ const getDivisorsCount = function(number)
     } 
   return divisorsOfNumber;
 }
-const result = getDivisorsCount(1);
+const result = getDivisorsCount(30);
 console.log(result);

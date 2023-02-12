@@ -2,20 +2,20 @@
 function getName1(name) {
         return  `Имя равно ${name}`;
 }
-let result = getName1(`Мотя`); 
-console.log(result);
+let resultOne = getName1(`Мотя`); 
+console.log(`resultOne`,resultOne);
 
 // Expression:
 const getName2 = function (name){
     return  `Имя равно ${name}`;
 }
-result = getName2(`Матвей`); 
-console.log(result);
+resultTwo = getName2(`Матвей`); 
+console.log(`result2`,resultTwo);
 
 
 // Arrow expression:
 const getName3 = (name) => {
     return `Имя равно ${name}`;
 } 
-result = getName3(`Матвейчик`); 
-console.log(result);
+resultThree = getName3(`Матвейчик`); 
+console.log(`result3`,resultThree);

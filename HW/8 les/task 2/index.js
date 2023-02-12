@@ -17,5 +17,5 @@ const getSumOfNumbers = (number, type = "odd") => {
     }
     return sum;
   };
-  const result = getSumOfNumbers(10,'even');
+  const result = getSumOfNumbers(12,'even');
 console.log(result);
