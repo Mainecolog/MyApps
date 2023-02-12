@@ -1,18 +1,17 @@
-const coffees = [`0`,'latte', 'cappuccino', 'americano'];
-const coffeeName = prompt(`Поиск кофе по названию:`,).toLowerCase();
+const coffees = ['Latte', 'Cappuccino', 'Americano'];
+const toLowercaseCoffee = coffees.map( (toLowerCoffeeName)=> 
+{return toLowerCoffeeName.toLocaleLowerCase().trim();});
+console.log(toLowercaseCoffee);
+const coffeeName = prompt(`Поиск кофе по названию:`,).toLowerCase().trim();
 console.log(`coffeeName`,coffeeName);
-// if (!coffees.includes(coffeeName))
-const searchCoffeName = coffees.find((searchCoffee)=> {
-    return searchCoffee === coffeeName;});
-if (!searchCoffeName)
-{
-    alert(`К сожалению, такого вида кофе нет в наличии`);
-}
-else 
-{
-    const searchIndex = coffees.findIndex((searchCoffee)=> 
-    {
-        return searchCoffee === coffeeName;
-    });
-        alert(`Держите ваш любимый кофе ${coffeeName}. Он ${searchIndex} по популярности в нашей кофейне.`);
-    }
+const searchIndex = toLowercaseCoffee.findIndex((searchCoffee)=> 
+    {return searchCoffee === coffeeName;});
+console.log(`searchIndex`,searchIndex);
+const popCoffe = searchIndex+1;
+console.log(`popCoffe`,popCoffe);
+if (!searchIndex)
+{alert(`Держите ваш любимый кофе ${coffeeName}. Он ${popCoffe} по популярности в нашей кофейне.`);}
+else
+{alert(`К сожалению, такого вида кофе нет в наличии`);}
+
+    
