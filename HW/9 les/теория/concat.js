@@ -1,26 +1,26 @@
 // .CONCAT and ...
 
-// const currentDevelopers = [`Maxim`,`Oleg`];
-// const newDevelopers = [`Anton`,`Gleb`];
-
-// // 1. // Метод .CONCAT. Создает новый массив.
-// // .concat(массив с элементами для добавления(может быть несколько массивов))
-// const allDevelopers = currentDevelopers.concat(newDevelopers);
-// console.log(`allDevelopers`,allDevelopers);
-
-// 2. // ... Спред-оператор
 const currentDevelopers = [`Maxim`,`Oleg`];
 const newDevelopers = [`Anton`,`Gleb`];
 
-// До [`Maxim`,`Oleg`]
-// После `Maxim`,`Oleg`
-
-const allDevelopers = [
-    ...currentDevelopers,
-    `the best`,
-    ...currentDevelopers,
-];
+// 1. // Метод .CONCAT. Создает новый массив.
+// .concat(массив с элементами для добавления(может быть несколько массивов))
+const allDevelopers = currentDevelopers.concat(newDevelopers);
 console.log(`allDevelopers`,allDevelopers);
+
+// // 2. // ... Спред-оператор
+// const currentDevelopers = [`Maxim`,`Oleg`];
+// const newDevelopers = [`Anton`,`Gleb`];
+
+// // До [`Maxim`,`Oleg`]
+// // После `Maxim`,`Oleg`
+
+// const allDevelopers = [
+//     ...currentDevelopers,
+//     `the best`,
+//     ...currentDevelopers,
+// ];
+// console.log(`allDevelopers`,allDevelopers);
 
 // Так выглядит "под капотом"
 // const allDevelopers =[
