@@ -18,7 +18,7 @@ console.log(`newDate`,newDate);
 // getMilliseconds - Минута
 console.log(`year`,newDate.getFullYear());
 console.log(`year`,newDate.getMonth());
-console.log(`year`,newDate.getDate());
+console.log(`день`,newDate.getDate());
 console.log(`year`,newDate.getMinutes());
 console.log(`year`,newDate.getHours());
 console.log(`year`,newDate.getSeconds());
