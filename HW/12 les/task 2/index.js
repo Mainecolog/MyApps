@@ -12,14 +12,17 @@ const dog = {
        return 'Чик-чирик';
     },
  };
-
+ let newObj = {};
  makeDomestic = function (isDomestic) {
     console.log(`${this.type} по имени ${this.name} говорит ${this.makeSound()}`);
-    this.isDomestic = isDomestic;
-    return this;
+    newObj = {...this};
+    newObj.isDomestic = isDomestic;
+    return newObj;
  };
-
+console.log(newObj);
 makeDomestic.call(bird,(false));
+console.log(newObj);
+console.log(bird);
 makeDomestic.apply(bird,[false]);
 const bindedAnimal = makeDomestic.bind(dog);
 console.log(bindedAnimal(true));
