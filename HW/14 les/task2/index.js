@@ -16,54 +16,28 @@ const tasks = [
     },
 ];
 
-
-
-    function newHTML (task) { 
-        const taskList = document.querySelector('div');
-        taskList.className = 'tasks-list'; 
-        const simpleInner = 
-         `
-         <div class="task-item" data-task-id="${task.id}">
-            <div class="task-item__main-container">
-                <div class="task-item__main-content">
-                    <form class="checkbox-form">
-                        <input class="checkbox-form__checkbox" type="checkbox" id="task-${task.id}">
-                        <label for="task-${task.id}"></label>
-                    </form>
-                    <span class="task-item__text">${task.text}</span>
+    function renderTasks (tasks) {
+        for (const task of tasks){
+            const taskList = document.querySelector('div');
+            taskList.className = 'tasks-list'; 
+            const simpleInner = 
+            `
+            <div class="task-item" data-task-id="${task.id}">
+                <div class="task-item__main-container">
+                    <div class="task-item__main-content">
+                        <form class="checkbox-form">
+                            <input class="checkbox-form__checkbox" type="checkbox" id="task-${task.id}">
+                            <label for="task-${task.id}"></label>
+                        </form>
+                        <span class="task-item__text">${task.text}</span>
+                    </div>
+                    <button class="task-item__delete-button default-button delete-button" data-delete-task-id="5">
+                        Удалить
+                    </button>
                 </div>
-                <button class="task-item__delete-button default-button delete-button" data-delete-task-id="5">
-                    Удалить
-                </button>
             </div>
-        </div>
-        `;
-        taskList.insertAdjacentHTML('beforeend', simpleInner)
+            `;
+            taskList.insertAdjacentHTML('beforeend', simpleInner)
+        };
     };
-
-newHTML(tasks[0]);
-newHTML(tasks[1]);
-newHTML(tasks[2]);
-
-
-
-
-
-
-
-// for (let i = 0; i < tasks.length; i++){
-// console.log(valuesObj[i].id);
-
-// }
-// // function p(tasks) {
-// //     let massive = [];
-// //     massive.id = [];
-// //     massive.completed =[] ;
-// //     massive.text = [];
-// //     for (let i = 0; i < tasks.length; i++){
-// //         massive.completed += tasks[i].completed;
-// //     }
-// //     console.log(massive);
-// // }
-
-// p(tasks);
+    renderTasks(tasks);
